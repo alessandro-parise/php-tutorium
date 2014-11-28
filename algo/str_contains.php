@@ -1,7 +1,26 @@
 <?php
-function str_contains($haystack, $needle)
+function testStrContains($haystack, $needle)
 {
+	if(strpos ($haystack , $needle) !== false){				
+		return true;
+	}else{
+		return false;
+	}
 
+}
+
+
+function testSchaltjahr($year, $expectedResult)
+{
+	$actualResult = isSchaltjahr($year);
+	if ($actualResult === $expectedResult)
+	{
+		echo 'Ok<br />';
+	}
+	else
+	{
+		echo 'Falsch: isSchaltjahr(' . $year . ') sollte ' . $expectedResult . ' zurueckgeben. (Ist: ' . $actualResult . ')<br />'; 	
+	}
 }
 
 
